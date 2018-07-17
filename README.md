@@ -18,6 +18,9 @@ See more CheatSheets from Denny: [here](https://github.com/topics/denny-cheatshe
 | Split window           | `C-b %`                             |
 |                        | `C-b "`                             |
 |                        | `C-b x`                             |
+| new session            | tmux new -s denny                   |
+| list session           | tmux ls                             |
+| attach session         | tmux attach -t denny                |
 
 ## tmate
 

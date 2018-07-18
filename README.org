@@ -20,18 +20,15 @@
 https://github.com/tmate-io/tmate
 * #  --8<-------------------------- separator ------------------------>8-- :noexport:
 * TODO tmux copy and paste
-* TODO tmate make the big frame by default
-* TODO scroll tmux output faster
-* #  --8<-------------------------- separator ------------------------>8-- :noexport:
 * TODO tmux copy the whole buffer context
 http://stackoverflow.com/questions/12289227/how-do-i-copy-entire-contents-of-file-1-pane-in-tmux-emacs-copy-mode
-* TODO tmate close one frame
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
 * TODO tmate one session
-* TODO tmux full screen, instead of from a smaller client
 * TODO tmate: disable C-b c
 * TODO re-run the tmux last ssh command
 * TODO [#A] copy k8s yaml to tmux, the two lines mess up
 * TODO [#A] emacs tramp doesn't work with tmux
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
 * TODO Save sessions of previous tmux ssh
 * [#A] Blog: tmux一个优秀的终端复用软件，类似GNU Screen
 | Name                   | Comment                                                         |

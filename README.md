@@ -58,12 +58,13 @@ Table of Contents
 
 ## Tmate
 
-| Name                                           | Comment                                                |
-| :--------------------------------------------- | ------------------------------------------------------ |
-| see tmate log messages: ssh conn string        | `tmate show-messages`                                  |
-| Launch tmate in a detached state               | `tmate -S /tmp/tmate.sock new-session -d`              |
-| Blocks until the SSH connection is established | `tmate -S /tmp/tmate.sock wait tmate-ready`            |
-| Prints the SSH connection string               | `tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'`   |
+| Name                                           | Comment                                                                       |
+| :--------------------------------------------- | ----------------------------------------------------------------------------- |
+| see tmate log messages: ssh conn string        | `tmate show-messages`                                                         |
+| Launch tmate in a detached state               | `tmate -S /tmp/tmate.sock new-session -d`                                     |
+| Blocks until the SSH connection is established | `tmate -S /tmp/tmate.sock wait tmate-ready`                                   |
+| Prints the SSH connection string               | `tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'`                          |
+| Make your tmate session big by default         | [Make your default iterm window big](https://apple.stackexchange.com/a/98406) |
 
 # More links
 

@@ -22,16 +22,12 @@ https://github.com/tmate-io/tmate
 * TODO tmux copy and paste
 * TODO tmux copy the whole buffer context
 http://stackoverflow.com/questions/12289227/how-do-i-copy-entire-contents-of-file-1-pane-in-tmux-emacs-copy-mode
-* TODO tmate copy buffer to mac clipboard
-http://www.rushiagr.com/blog/2016/06/16/everything-you-need-to-know-about-tmux-copy-pasting/
 * #  --8<-------------------------- separator ------------------------>8-- :noexport:
 * TODO tmux zsh
 * TODO tmate one session
 * TODO tmate: disable C-b c
 * TODO re-run the tmux last ssh command
-* TODO [#A] copy k8s yaml to tmux, the two lines mess up
 * TODO [#A] emacs tramp doesn't work with tmux
-* #  --8<-------------------------- separator ------------------------>8-- :noexport:
 * TODO Save sessions of previous tmux ssh
 * [#A] Blog: tmux一个优秀的终端复用软件，类似GNU Screen
 | Name                   | Comment                                                         |
@@ -69,3 +65,11 @@ bind % split-window -h -c "#{pane_current_path}"
 EOF
 
 cat ~/.tmux.conf
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
+* DONE [#A] copy k8s yaml to tmux, the two lines mess up: :set paste, then press i
+  CLOSED: [2018-07-18 Wed 16:40]
+* DONE tmate copy buffer to mac clipboard
+  CLOSED: [2018-07-18 Wed 16:39]
+http://www.rushiagr.com/blog/2016/06/16/everything-you-need-to-know-about-tmux-copy-pasting/
+https://awhan.wordpress.com/2010/06/20/copy-paste-in-tmux/
+

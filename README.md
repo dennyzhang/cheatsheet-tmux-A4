@@ -58,7 +58,8 @@ Table of Contents
 
 - Copy to mac clipboard
 
-# Only works for the laptop who hosts the tmux/tmate session
+Note: Only works for the laptop who hosts the tmux/tmate session
+
 ```
 brew install reattach-to-user-namespace
 

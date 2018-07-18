@@ -22,7 +22,10 @@ https://github.com/tmate-io/tmate
 * TODO tmux copy and paste
 * TODO tmux copy the whole buffer context
 http://stackoverflow.com/questions/12289227/how-do-i-copy-entire-contents-of-file-1-pane-in-tmux-emacs-copy-mode
+* TODO tmate copy buffer to mac clipboard
+http://www.rushiagr.com/blog/2016/06/16/everything-you-need-to-know-about-tmux-copy-pasting/
 * #  --8<-------------------------- separator ------------------------>8-- :noexport:
+* TODO tmux zsh
 * TODO tmate one session
 * TODO tmate: disable C-b c
 * TODO re-run the tmux last ssh command

@@ -56,6 +56,18 @@ Table of Contents
 | List all buffer               | `tmux list-buffers`                              |
 | Save buffer to file           | `tmux save-buffer foo.txt`                       |
 
+- Copy to mac clipboard
+
+```
+brew install reattach-to-user-namespace
+
+# In tmux, search a region. Then save to pbcopy
+tmux save-buffer - | reattach-to-user-namespace pbcopy
+
+# In mac terminal
+pbpaste
+```
+
 ## Tmate
 
 | Name                                           | Comment                                                                       |

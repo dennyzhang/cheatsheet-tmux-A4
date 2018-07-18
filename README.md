@@ -13,7 +13,7 @@ Table of Contents
    * [cheatsheet-tmux-A4](#cheatsheet-tmux-a4)
       * [Tmux Basic](#tmux-basic)
       * [Tmux Layout &amp; Scroll](#tmux-layout--scroll)
-      * [Tmux Copy](#tmux-copy)
+      * [Tmux Console Output](#tmux-console-output)
       * [Tmate](#tmate)
    * [More links](#more-links)
 
@@ -30,6 +30,7 @@ Table of Contents
 | Kill one session       | `tmux kill-session -t denny`           |
 | List all shortcut keys | `C-b :list-keys`, `C-b ?` Very useful! |
 | Kill current window    | `C-b &`                                |
+| Default conf file      | `~/.tmux.conf`, `~/.tmate.conf`        |
 
 ## Tmux Layout & Scroll
 
@@ -45,16 +46,24 @@ Table of Contents
 
 ## Tmux Console Output
 
-| Name                   | Comment                             |
-| :--------------------- | ----------------------------------- |
-| Enter copy mode        | `C-b [`, press q/Esc to exit        |
-| Search output          | `C-b C-s`, `C-b C-u`                |
+| Name                          | Comment                                          |
+| :---------------------------  | ------------------------------------------------ |
+| Enter copy mode               | `C-b [`, press q/Esc to exit                     |
+| Search output                 | `C-b C-s`, `C-b C-u`                             |
+| Paste buffer to current panel | `C-b]`                                           |
+| Page up/down                  | Enter copy mode, then use normal navigation keys |
+| Show things in current buffer | `tmux show-buffer`                               |
+| List all buffer               | `tmux list-buffers`                              |
+| Save buffer to file           | `tmux save-buffer foo.txt`                       |
 
 ## Tmate
 
-| Name                                               | Comment                             |
-| :------------------------------------------------- | ----------------------------------- |
-| see tmate log messages, including ssh conn string  | `tmate show-messages`               |
+| Name                                           | Comment                                                |
+| :--------------------------------------------- | ------------------------------------------------------ |
+| see tmate log messages: ssh conn string        | `tmate show-messages`                                  |
+| Launch tmate in a detached state               | `tmate -S /tmp/tmate.sock new-session -d`              |
+| Blocks until the SSH connection is established | `tmate -S /tmp/tmate.sock wait tmate-ready`            |
+| Prints the SSH connection string               | `tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'`   |
 
 # More links
 

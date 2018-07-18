@@ -19,9 +19,7 @@
   CLOSED: [2018-07-18 Wed 09:38]
 https://github.com/tmate-io/tmate
 * #  --8<-------------------------- separator ------------------------>8-- :noexport:
-* TODO tmux page up and page down
 * TODO tmux copy and paste
-* TODO search in tmux console output
 * TODO tmate make the big frame by default
 * TODO scroll tmux output faster
 * #  --8<-------------------------- separator ------------------------>8-- :noexport:
@@ -29,6 +27,7 @@ https://github.com/tmate-io/tmate
 http://stackoverflow.com/questions/12289227/how-do-i-copy-entire-contents-of-file-1-pane-in-tmux-emacs-copy-mode
 * TODO tmate close one frame
 * TODO tmate one session
+* TODO tmux full screen, instead of from a smaller client
 * TODO tmate: disable C-b c
 * TODO re-run the tmux last ssh command
 * TODO [#A] copy k8s yaml to tmux, the two lines mess up

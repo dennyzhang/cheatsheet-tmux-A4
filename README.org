@@ -15,45 +15,33 @@
 #+OPTIONS: \n:t ^:nil LaTeX:nil @:nil
 #+OPTIONS: creator:nil
 #+OPTIONS: timestamp:t
-* TODO tmate close one frame
-* TODO tmate swap window
-* TODO tmate one session?
-* TODO tmate: disable C-b c
-* TODO tmate default window to be big
-* TODO tmux copy and paste
-* TODO re-run the tmux last ssh command
-* TODO search in tmux console output
+* DONE tmate: Instant Terminal Sharing
+  CLOSED: [2018-07-18 Wed 09:38]
+https://github.com/tmate-io/tmate
 * #  --8<-------------------------- separator ------------------------>8-- :noexport:
-* TODO 8 Tips Of Using Tmux As A Pro
-** TODO Search text in tmux output
-** TODO Scroll faster in tmux output
-** TODO Save sessions of previous tmux ssh
-** TODO tmux cheatsheet
-** #  --8<-------------------------- separator ------------------------>8--
-** TODO explore existing tmux repos
-** [#A] Blog: tmux一个优秀的终端复用软件，类似GNU Screen
-- tmux快捷键
+* TODO tmux page up and page down
+* TODO tmux copy and paste
+* TODO search in tmux console output
+* TODO tmate make the big frame by default
+* TODO scroll tmux output faster
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
+* TODO tmux copy the whole buffer context
+http://stackoverflow.com/questions/12289227/how-do-i-copy-entire-contents-of-file-1-pane-in-tmux-emacs-copy-mode
+* TODO tmate close one frame
+* TODO tmate one session
+* TODO tmate: disable C-b c
+* TODO re-run the tmux last ssh command
+* TODO [#A] copy k8s yaml to tmux, the two lines mess up
+* TODO [#A] emacs tramp doesn't work with tmux
+* TODO Save sessions of previous tmux ssh
+* [#A] Blog: tmux一个优秀的终端复用软件，类似GNU Screen
 | Name                   | Comment                                                         |
 |------------------------+-----------------------------------------------------------------|
-| tmux attach            | 重新进入之前的会话                                              |
 | C-b d                  | 退出tmux                                                        |
-|------------------------+-----------------------------------------------------------------|
 | C-b c                  | 创建新窗口                                                      |
 | C-b n                  | 切换至下一窗口                                                  |
-| C-b [                  | 进入复制模式, 按q/Esc退出                                       |
-| C-b &                  | 关闭当前窗口                                                    |
 | C-b :                  | 进入命令行模式, 例如split-window, rename-window, rename-session |
-|------------------------+-----------------------------------------------------------------|
-| C-b "                  | 将当前Panel平分为上下两块                                       |
-| C-b %                  | 将当前Panel平分为左右两块                                       |
-| C-b o                  | 切换Panel                                                       |
-| C-b x                  | 关闭Panel                                                       |
-|------------------------+-----------------------------------------------------------------|
-| tmux ls                | list sessions                                                   |
-| tmux kill-session -t 2 | Kill given session                                              |
-|------------------------+-----------------------------------------------------------------|
 | C-b Ctrl+方向          | 以1个单元格为单位移动边缘以调整当前面板大小                     |
-| Ctrl-b ?               | List all keybindings                                            |
 
 - tmux使用C/S模型构建，主要包括以下单元模块：
 | Name    | Comment                                    |
@@ -62,11 +50,9 @@
 | session | 会话。一个服务器可以包含多个会话。         |
 | window  | 窗口。一个会话可以包含多个窗口。           |
 | pane    | 面板。一个窗口可以包含多个面板。           |
-*** TODO mac make tmux make the font bigger
-*** DONE mac tmux search: C-s
-    CLOSED: [2015-05-20 Wed 00:33]
-*** DONE tmux page up and page down: i, c-b c-f
-  CLOSED: [2015-10-13 Tue 15:56]
+** TODO mac make tmux make the font bigger
+** DONE tmux page up and page down: i, c-b c-f
+   CLOSED: [2015-10-13 Tue 15:56]
 #+BEGIN_EXAMPLE
 这个可以起tmux
 tmux里，一两个小时基本不过期。
@@ -74,40 +60,8 @@ tmux里，一两个小时基本不过期。
 #用vi模式操作 翻页用c-b c-f等 可以把vi替换成 emacs
 setw -g mode-keys vi
 #+END_EXAMPLE
-*** DONE tmux use dedicated session: tmux new -s denny; tmux attach -t denny
-  CLOSED: [2015-11-03 Tue 10:58]
-tmux new -s uu
-tmux attach -t uu
-*** DONE tmux: centos source compile and install
-  CLOSED: [2013-05-16 Thu 11:29]
-http://hi.baidu.com/raidenxu/item/d0274e9c0ebf55cbb6253136
-#+begin_example
-yum install libevent-devel ncurses-devel
-
-安装tmux：
-
-wget http://downloads.sourceforge.net/tmux/tmux-1.6.tar.gz
-tar zxvf tmux-1.6.tar.gz
-cd tmux-1.6
-./configure
-make
-make install
-
-#+end_example
-*** # --8<-------------------------- separator ------------------------>8--
-*** basic use
--  You can attach and detach different windows in different sessions without any issues
-*** useful link
-https://www.sitepoint.com/tmux-a-simple-start/
-https://wiki.freebsdchina.org/software/t/tmux
-http://tmux.sourceforge.net/
-*** [question] tmux拷贝整个buffer的内容
-  :PROPERTIES:
-  :ID:       6DCEC494-D1FC-4A0A-957D-EB1B0794AB18
-  :END:
-http://stackoverflow.com/questions/12289227/how-do-i-copy-entire-contents-of-file-1-pane-in-tmux-emacs-copy-mode
-*** DONE Create new-window with current directory in tmux
-  CLOSED: [2017-06-27 Tue 17:27]
+** DONE Create new-window with current directory in tmux
+   CLOSED: [2017-06-27 Tue 17:27]
 https://unix.stackexchange.com/questions/12032/create-new-window-with-current-directory-in-tmux
 cat > ~/.tmux.conf <<EOF
 bind c new-window -c "#{pane_current_path}"
@@ -116,5 +70,3 @@ bind % split-window -h -c "#{pane_current_path}"
 EOF
 
 cat ~/.tmux.conf
-** DONE tmux search screen: go to tmux mode, then C-s
-   CLOSED: [2018-02-07 Wed 22:07]

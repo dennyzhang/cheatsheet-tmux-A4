@@ -7,27 +7,62 @@ File me [tickets](https://github.com/DennyZhang/cheatsheet-tmux-A4/issues) or st
 
 See more CheatSheets from Denny: [here](https://github.com/topics/denny-cheatsheets)
 
-<a href="https://www.dennyzhang.com"><img align="right" width="185" height="37" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
+Table of Contents
+=================
 
+   * [cheatsheet-tmux-A4](#cheatsheet-tmux-a4)
+      * [Tmux Basic](#tmux-basic)
+      * [Tmux Layout &amp; Scroll](#tmux-layout--scroll)
+      * [Tmux Copy](#tmux-copy)
+      * [Tmate](#tmate)
+   * [More links](#more-links)
+
+<a href="https://www.dennyzhang.com"><img align="right" width="185" height="37" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
   
-## tmux
+## Tmux Basic
+
+| Name                   | Comment                                |
+| :--------------------- | -------------------------------------- |
+| Create new session     | `tmux new -s denny`                    |
+| List all sessions      | `tmux ls`                              |
+| Attach to one session  | `tmux attach -t denny`                 |
+| Detach session         | `C-b d`                                |
+| Kill one session       | `tmux kill-session -t denny`           |
+| List all shortcut keys | `C-b :list-keys`, `C-b ?` Very useful! |
+| Kill current window    | `C-b &`                                |
+
+## Tmux Layout & Scroll
+
+| Name                      | Comment                   |
+| :---------------------    | ------------------------- |
+| Switch to next pane       | `C-b o`                   |
+| Vertically split pane     | `C-b %`                   |
+| Horizontally split pane   | `C-b "`                   |
+| Kill current pane         | `C-b x`                   |
+| Swap two panes            | `C-b C-o`                 |
+| Resize current pane right | `C-b :resize-pane -R 20`  |
+| Resize current pane down  | `C-b :resize-pane -D 10`  |
+
+## Tmux Console Output
 
 | Name                   | Comment                             |
 | :--------------------- | ----------------------------------- |
-| switch to next window  | `C-b o`                             |
-| Split window           | `C-b %`                             |
-|                        | `C-b "`                             |
-|                        | `C-b x`                             |
-| new session            | tmux new -s denny                   |
-| list session           | tmux ls                             |
-| attach session         | tmux attach -t denny                |
+| Enter copy mode        | `C-b [`, press q/Esc to exit        |
+| Search output          | `C-b C-s`, `C-b C-u`                |
 
-## tmate
+## Tmate
 
-| Name          | Comment                                   |
-| :------------ | -----------------------------------       |
+| Name                                               | Comment                             |
+| :------------------------------------------------- | ----------------------------------- |
+| see tmate log messages, including ssh conn string  | `tmate show-messages`               |
 
 # More links
+
+```
+https://gist.github.com/MohamedAlaa/2961058
+https://wiki.freebsdchina.org/software/t/tmux
+```
+
 - TODO: Need to automatically generate pdf
 
 - License: Code is licensed under [MIT License](https://www.dennyzhang.com/wp-content/mit_license.txt).

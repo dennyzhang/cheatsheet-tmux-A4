@@ -46,7 +46,7 @@ See more CheatSheets from Denny: [[https://github.com/topics/denny-cheatsheets][
 |---------------------------+--------------------------|
 | Switch to next pane       | =C-b o=                  |
 | Vertically split pane     | =C-b %=                  |
-| Horizontally split pane   | =C-b "=                  |
+| Horizontally split pane   | C-b "                    |
 | Kill current pane         | =C-b x=                  |
 | Swap two panes            | =C-b C-o=                |
 | Resize current pane right | =C-b :resize-pane -R 20= |
@@ -78,13 +78,14 @@ pbpaste
 #+END_SRC
 ** Tmate
 
-| Name                                           | Comment                                                                       |
-|------------------------------------------------+-------------------------------------------------------------------------------|
-| see tmate log messages: ssh conn string        | =tmate show-messages=                                                         |
-| Launch tmate in a detached state               | =tmate -S /tmp/tmate.sock new-session -d=                                     |
-| Blocks until the SSH connection is established | =tmate -S /tmp/tmate.sock wait tmate-ready=                                   |
-| Prints the SSH connection string               | =tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'=                          |
-| Make your tmate session big by default         | [Make your default iterm window big](https://apple.stackexchange.com/a/98406) |
+| Name                                           | Comment                                            |
+|------------------------------------------------+----------------------------------------------------|
+| see tmate log messages: ssh conn string        | =tmate show-messages=                              |
+| Launch tmate in a detached state               | =tmate -S /tmp/tmate.sock new-session -d=          |
+| Blocks until the SSH connection is established | =tmate -S /tmp/tmate.sock wait tmate-ready=        |
+| Prints the SSH connection string               | tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}' |
+| Make your tmate session big by default         | [[https://apple.stackexchange.com/a/98406][Make your default iterm window big]]                 |
+
 * More Resources
 License: Code is licensed under [[https://www.dennyzhang.com/wp-content/mit_license.txt][MIT License]].
 

@@ -1,35 +1,106 @@
-*- mode:org; fill-column:70; coding:utf-8; -*-
-* org-mode configuration
-#+STARTUP: overview
-#+STARTUP: customtime
-#+STARTUP: noalign
-#+STARTUP: logdone
-#+STARTUP: hidestars
-#+TAGS: ARCHIVE(a) WEBPAGE(w) LIFE(l) IMPORTANT(i) Habit(h) Communication(c) Recite(r) noexport(n) Shopping(s) Difficult(d) Target(t) Misc(m) BLOG(b) Family(f)
-#+SEQ_TODO: TODO HALF ASSIGN | DONE CANCELED BYPASS DELEGATE DEFERRED
-#+DRAWERS: HIDDEN CODE CONF EMAIL WEBPAGE SNIP
+* org-mode configuration                                           :noexport:
+#+STARTUP: overview customtime noalign logdone hidestars
+#+TITLE:  tmux CheatSheet
+#+DESCRIPTION:
+#+KEYWORDS:
+#+AUTHOR: Denny Zhang
+#+EMAIL:  denny@dennyzhang.com
+#+TAGS: noexport(n)
 #+PRIORITIES: A D C
-#+ARCHIVE: %s_done::** Finished Tasks
-#+AUTHOR: dennyzhang.com (denny@dennyzhang.com)
-#+OPTIONS: toc:3
-#+OPTIONS: \n:t ^:nil LaTeX:nil @:nil
-#+OPTIONS: creator:nil
-#+OPTIONS: timestamp:t
-* DONE tmate: Instant Terminal Sharing
-  CLOSED: [2018-07-18 Wed 09:38]
-https://github.com/tmate-io/tmate
+#+OPTIONS:   H:3 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+EXPORT_EXCLUDE_TAGS: exclude noexport
+#+SEQ_TODO: TODO HALF ASSIGN | DONE BYPASS DELEGATE CANCELED DEFERRED
+#+LINK_UP:
+#+LINK_HOME:
+* Summary
+#+BEGIN_HTML
+<a href="https://www.linkedin.com/in/dennyzhang001"><img src="https://www.dennyzhang.com/wp-content/uploads/sns/linkedin.png" alt="linkedin" /></a>
+<a href="https://github.com/DennyZhang"><img src="https://www.dennyzhang.com/wp-content/uploads/sns/github.png" alt="github" /></a>
+<a href="https://www.dennyzhang.com/slack" target="_blank" rel="nofollow"><img src="http://slack.dennyzhang.com/badge.svg" alt="slack"/></a>
+<a href="https://github.com/DennyZhang"><img align="right" width="200" height="183" src="https://www.dennyzhang.com/wp-content/uploads/denny/watermark/github.png" /></a>
+
+<br/><br/>
+
+<a href="http://makeapullrequest.com" target="_blank" rel="nofollow"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"/></a>
+#+END_HTML
+* CheatSheet
+File me [[https://github.com/DennyZhang/cheatsheet-emacs-A4/issues][Issues]] or star [[https://github.com/DennyZhang/cheatsheet-emacs-A4][this repo]].
+
+See more CheatSheets from Denny: [[https://github.com/topics/denny-cheatsheets][#denny-cheatsheets]]
+** Tmux Basic
+
+| Name                   | Comment                                |
+|------------------------+----------------------------------------|
+| Create new session     | =tmux new -s denny=                    |
+| List all sessions      | =tmux ls=                              |
+| Attach to one session  | =tmux attach -t denny=                 |
+| Detach session         | =C-b d=                                |
+| Kill one session       | =tmux kill-session -t denny=           |
+| List all shortcut keys | =C-b :list-keys=, =C-b ?= Very useful! |
+| Kill current window    | =C-b &=                                |
+| Default conf file      | =~/.tmux.conf=, =~/.tmate.conf=        |
+** Tmux Layout & Scroll
+
+| Name                      | Comment                  |
+|---------------------------+--------------------------|
+| Switch to next pane       | =C-b o=                  |
+| Vertically split pane     | =C-b %=                  |
+| Horizontally split pane   | =C-b "=                  |
+| Kill current pane         | =C-b x=                  |
+| Swap two panes            | =C-b C-o=                |
+| Resize current pane right | =C-b :resize-pane -R 20= |
+| Resize current pane down  | =C-b :resize-pane -D 10= |
+** Tmux Console Output
+
+| Name                          | Comment                                          |
+|-------------------------------+--------------------------------------------------|
+| Enter copy mode               | =C-b [=, press q/Esc to exit                     |
+| Search output                 | =C-b C-s=, =C-b C-u=                             |
+| Paste buffer to current panel | =C-b]=                                           |
+| Page up/down                  | Enter copy mode, then use normal navigation keys |
+| Show things in current buffer | =tmux show-buffer=                               |
+| List all buffer               | =tmux list-buffers=                              |
+| Save buffer to file           | =tmux save-buffer foo.txt=                       |
+
+- Copy to mac clipboard
+
+Note: Only works for the laptop who hosts the tmux/tmate session
+
+#+BEGIN_SRC sh
+brew install reattach-to-user-namespace
+
+# In tmux, search a region. Then save to pbcopy
+tmux save-buffer - | reattach-to-user-namespace pbcopy
+
+# In mac terminal
+pbpaste
+#+END_SRC
+** Tmate
+
+| Name                                           | Comment                                                                       |
+|------------------------------------------------+-------------------------------------------------------------------------------|
+| see tmate log messages: ssh conn string        | =tmate show-messages=                                                         |
+| Launch tmate in a detached state               | =tmate -S /tmp/tmate.sock new-session -d=                                     |
+| Blocks until the SSH connection is established | =tmate -S /tmp/tmate.sock wait tmate-ready=                                   |
+| Prints the SSH connection string               | =tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'=                          |
+| Make your tmate session big by default         | [Make your default iterm window big](https://apple.stackexchange.com/a/98406) |
+* More Resources
+License: Code is licensed under [[https://www.dennyzhang.com/wp-content/mit_license.txt][MIT License]].
+
+https://gist.github.com/MohamedAlaa/2961058
+
+https://wiki.freebsdchina.org/software/t/tmux
+
+https://robots.thoughtbot.com/a-tmux-crash-course
+
+#+BEGIN_HTML
+<a href="https://www.dennyzhang.com"><img align="right" width="201" height="268" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/denny_201706.png"></a>
+
+<a href="https://www.dennyzhang.com"><img align="right" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
+#+END_HTML
 * #  --8<-------------------------- separator ------------------------>8-- :noexport:
-* TODO tmux copy and paste
-* TODO tmux copy the whole buffer context
-http://stackoverflow.com/questions/12289227/how-do-i-copy-entire-contents-of-file-1-pane-in-tmux-emacs-copy-mode
-* #  --8<-------------------------- separator ------------------------>8-- :noexport:
-* TODO tmux zsh
-* TODO tmate one session
-* TODO tmate: disable C-b c
-* TODO re-run the tmux last ssh command
-* TODO [#A] emacs tramp doesn't work with tmux
-* TODO Save sessions of previous tmux ssh
-* [#A] Blog: tmux一个优秀的终端复用软件，类似GNU Screen
+* [#A] Blog: tmux一个优秀的终端复用软件，类似GNU Screen            :noexport:
 | Name                   | Comment                                                         |
 |------------------------+-----------------------------------------------------------------|
 | C-b d                  | 退出tmux                                                        |
@@ -65,11 +136,29 @@ bind % split-window -h -c "#{pane_current_path}"
 EOF
 
 cat ~/.tmux.conf
-* #  --8<-------------------------- separator ------------------------>8-- :noexport:
-* DONE [#A] copy k8s yaml to tmux, the two lines mess up: :set paste, then press i
+* DONE tmate: Instant Terminal Sharing                             :noexport:
+  CLOSED: [2018-07-18 Wed 09:38]
+https://github.com/tmate-io/tmate
+** DONE [#A] copy k8s yaml to tmux, the two lines mess up: :set paste, then press i
   CLOSED: [2018-07-18 Wed 16:40]
-* DONE tmate copy buffer to mac clipboard
+** DONE tmate copy buffer to mac clipboard
   CLOSED: [2018-07-18 Wed 16:39]
 http://www.rushiagr.com/blog/2016/06/16/everything-you-need-to-know-about-tmux-copy-pasting/
 https://awhan.wordpress.com/2010/06/20/copy-paste-in-tmux/
-
+** TODO [#A] Emacs Can't ssh to tmate                              :IMPORTANT:
+host host
+     HostName sf2.tmate.io
+     # Port 12360
+     StrictHostKeyChecking no
+     IdentityFile ~/.ssh/id_rsa
+     User Bkk4XXXXXXXXX
+** TODO tmux copy and paste
+** TODO tmux copy the whole buffer context
+http://stackoverflow.com/questions/12289227/how-do-i-copy-entire-contents-of-file-1-pane-in-tmux-emacs-copy-mode
+** #  --8<-------------------------- separator ------------------------>8-- :noexport:
+** TODO tmux zsh
+** TODO tmate one session
+** TODO tmate: disable C-b c
+** TODO re-run the tmux last ssh command
+** TODO [#A] emacs tramp doesn't work with tmux
+** TODO Save sessions of previous tmux ssh

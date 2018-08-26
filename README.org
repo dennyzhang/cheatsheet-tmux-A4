@@ -95,7 +95,6 @@ pbpaste
  #+END_HTML
 * org-mode configuration                                           :noexport:
 #+STARTUP: overview customtime noalign logdone showall
-#+TITLE:  tmux CheatSheet
 #+DESCRIPTION:
 #+KEYWORDS:
 #+AUTHOR: Denny Zhang

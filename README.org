@@ -80,13 +80,13 @@ pbpaste
 | Prints the SSH connection string               | tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}' |
 | Make your tmate session big by default         | [[https://apple.stackexchange.com/a/98406][Make your default iterm window big]]                 |
 ** More Resources
+https://gist.github.com/MohamedAlaa/2961058
+
+https://wiki.freebsdchina.org/software/t/tmux
+
+https://robots.thoughtbot.com/a-tmux-crash-course
+
  License: Code is licensed under [[https://www.dennyzhang.com/wp-content/mit_license.txt][MIT License]].
-
- https://gist.github.com/MohamedAlaa/2961058
-
- https://wiki.freebsdchina.org/software/t/tmux
-
- https://robots.thoughtbot.com/a-tmux-crash-course
 
  #+BEGIN_HTML
  <a href="https://www.dennyzhang.com"><img align="right" width="201" height="268" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/denny_201706.png"></a>
@@ -122,7 +122,7 @@ pbpaste
 #+LINK_UP:
 #+LINK_HOME:
 * #  --8<-------------------------- separator ------------------------>8-- :noexport:
-* [#A] Blog: tmux一个优秀的终端复用软件，类似GNU Screen            :noexport:
+* [#A] Blog: tmux一个优秀的终端复用软件,类似GNU Screen            :noexport:
 | Name                   | Comment                                                         |
 |------------------------+-----------------------------------------------------------------|
 | C-b d                  | 退出tmux                                                        |
@@ -131,19 +131,19 @@ pbpaste
 | C-b :                  | 进入命令行模式, 例如split-window, rename-window, rename-session |
 | C-b Ctrl+方向          | 以1个单元格为单位移动边缘以调整当前面板大小                     |
 
-- tmux使用C/S模型构建，主要包括以下单元模块：
+- tmux使用C/S模型构建,主要包括以下单元模块:
 | Name    | Comment                                    |
 |---------+--------------------------------------------|
-| server  | 服务器。输入tmux命令时就开启了一个服务器。 |
-| session | 会话。一个服务器可以包含多个会话。         |
-| window  | 窗口。一个会话可以包含多个窗口。           |
-| pane    | 面板。一个窗口可以包含多个面板。           |
+| server  | 服务器.输入tmux命令时就开启了一个服务器. |
+| session | 会话.一个服务器可以包含多个会话.         |
+| window  | 窗口.一个会话可以包含多个窗口.           |
+| pane    | 面板.一个窗口可以包含多个面板.           |
 ** TODO mac make tmux make the font bigger
 ** DONE tmux page up and page down: i, c-b c-f
    CLOSED: [2015-10-13 Tue 15:56]
 #+BEGIN_EXAMPLE
 这个可以起tmux
-tmux里，一两个小时基本不过期。
+tmux里,一两个小时基本不过期.
 在 ~/.tmux.conf 里加入一下配置内容:
 #用vi模式操作 翻页用c-b c-f等 可以把vi替换成 emacs
 setw -g mode-keys vi

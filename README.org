@@ -34,8 +34,8 @@ See more CheatSheets from Denny: [[https://github.com/topics/denny-cheatsheets][
 | List all shortcut keys | =C-b :list-keys=, =C-b ?= Very useful! |
 | Kill current window    | =C-b &=                                |
 | Default conf file      | =~/.tmux.conf=, =~/.tmate.conf=        |
-** Tmux Layout & Scroll
 
+** Tmux Layout & Scroll
 | Name                      | Comment                  |
 |---------------------------+--------------------------|
 | Switch to next pane       | =C-b o=                  |
@@ -45,8 +45,8 @@ See more CheatSheets from Denny: [[https://github.com/topics/denny-cheatsheets][
 | Swap two panes            | =C-b C-o=                |
 | Resize current pane right | =C-b :resize-pane -R 20= |
 | Resize current pane down  | =C-b :resize-pane -D 10= |
-** Tmux Console Output
 
+** Tmux Console Output
 | Name                          | Comment                                          |
 |-------------------------------+--------------------------------------------------|
 | Enter copy mode               | =C-b [=, press q/Esc to exit                     |
@@ -57,6 +57,15 @@ See more CheatSheets from Denny: [[https://github.com/topics/denny-cheatsheets][
 | List all buffer               | =tmux list-buffers=                              |
 | Save buffer to file           | =tmux save-buffer foo.txt=                       |
 
+** Tmate
+| Name                                           | Comment                                            |
+|------------------------------------------------+----------------------------------------------------|
+| see tmate log messages: ssh conn string        | =tmate show-messages=                              |
+| Launch tmate in a detached state               | =tmate -S /tmp/tmate.sock new-session -d=          |
+| Blocks until the SSH connection is established | =tmate -S /tmp/tmate.sock wait tmate-ready=        |
+| Prints tmate SSH connection string             | tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}' |
+| Make your tmate session big by default         | [[https://apple.stackexchange.com/a/98406][Make your default iterm window big]]                 |
+** Scripts
 - Copy to mac clipboard
 
 Note: Only works for the laptop who hosts the tmux/tmate session
@@ -70,15 +79,6 @@ tmux save-buffer - | reattach-to-user-namespace pbcopy
 # In mac terminal
 pbpaste
 #+END_SRC
-** Tmate
-
-| Name                                           | Comment                                            |
-|------------------------------------------------+----------------------------------------------------|
-| see tmate log messages: ssh conn string        | =tmate show-messages=                              |
-| Launch tmate in a detached state               | =tmate -S /tmp/tmate.sock new-session -d=          |
-| Blocks until the SSH connection is established | =tmate -S /tmp/tmate.sock wait tmate-ready=        |
-| Prints the SSH connection string               | tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}' |
-| Make your tmate session big by default         | [[https://apple.stackexchange.com/a/98406][Make your default iterm window big]]                 |
 ** More Resources
 https://gist.github.com/MohamedAlaa/2961058
 

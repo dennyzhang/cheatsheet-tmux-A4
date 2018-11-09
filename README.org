@@ -18,10 +18,9 @@
 
 - PDF Link: [[https://github.com/dennyzhang/cheatsheet-tmux-A4/blob/master/cheatsheet-tmux-A4.pdf][cheatsheet-tmux-A4.pdf]], Category: [[https://cheatsheet.dennyzhang.com/category/tools/][tools]]
 - Blog URL: https://cheatsheet.dennyzhang.com/cheatsheet-tmux-A4
+- Related posts: [[https://cheatsheet.dennyzhang.com/cheatsheet-ssh-A4][Cheatsheet: ssh]], [[https://cheatsheet.dennyzhang.com/cheatsheet-find-A4][CheatSheet: Linux Find]], [[https://github.com/topics/denny-cheatsheets][#denny-cheatsheets]]
 
 File me [[https://github.com/dennyzhang/cheatsheet-emacs-A4/issues][Issues]] or star [[https://github.com/DennyZhang/cheatsheet-emacs-A4][this repo]].
-
-See more CheatSheets from Denny: [[https://github.com/topics/denny-cheatsheets][#denny-cheatsheets]]
 ** Tmux Basic
 | Name                   | Comment                                |
 |------------------------+----------------------------------------|
@@ -241,3 +240,4 @@ Ctrl-b %
 
 # Split windows vertically:
 Ctrl-b "
+* TODO [#A] tmate copy files in client side              :noexport:IMPORTANT:

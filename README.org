@@ -18,7 +18,7 @@
 
 - PDF Link: [[https://github.com/dennyzhang/cheatsheet-tmux-A4/blob/master/cheatsheet-tmux-A4.pdf][cheatsheet-tmux-A4.pdf]], Category: [[https://cheatsheet.dennyzhang.com/category/tools/][tools]]
 - Blog URL: https://cheatsheet.dennyzhang.com/cheatsheet-tmux-A4
-- Related posts: [[https://cheatsheet.dennyzhang.com/cheatsheet-ssh-A4][Cheatsheet: ssh]], [[https://cheatsheet.dennyzhang.com/cheatsheet-find-A4][CheatSheet: Linux Find]], [[https://github.com/topics/denny-cheatsheets][#denny-cheatsheets]]
+- Related posts: [[https://cheatsheet.dennyzhang.com/cheatsheet-ssh-A4][Cheatsheet: ssh]], [[https://github.com/topics/denny-cheatsheets][#denny-cheatsheets]]
 
 File me [[https://github.com/dennyzhang/cheatsheet-emacs-A4/issues][Issues]] or star [[https://github.com/DennyZhang/cheatsheet-emacs-A4][this repo]].
 ** Tmux Basic
@@ -32,7 +32,6 @@ File me [[https://github.com/dennyzhang/cheatsheet-emacs-A4/issues][Issues]] or 
 | List all shortcut keys | =C-b :list-keys=, =C-b ?= Very useful! |
 | Kill current window    | =C-b &=                                |
 | Default conf file      | =~/.tmux.conf=, =~/.tmate.conf=        |
-
 ** Tmux Layout & Scroll
 | Name                      | Comment                  |
 |---------------------------+--------------------------|
@@ -43,7 +42,6 @@ File me [[https://github.com/dennyzhang/cheatsheet-emacs-A4/issues][Issues]] or 
 | Swap two panes            | =C-b C-o=                |
 | Resize current pane right | =C-b :resize-pane -R 20= |
 | Resize current pane down  | =C-b :resize-pane -D 10= |
-
 ** Tmux Console Output
 | Name                          | Comment                                          |
 |-------------------------------+--------------------------------------------------|
@@ -54,7 +52,6 @@ File me [[https://github.com/dennyzhang/cheatsheet-emacs-A4/issues][Issues]] or 
 | Show things in current buffer | =tmux show-buffer=                               |
 | List all buffer               | =tmux list-buffers=                              |
 | Save buffer to file           | =tmux save-buffer foo.txt=                       |
-
 ** Tmate
 | Name                                           | Comment                                            |
 |------------------------------------------------+----------------------------------------------------|
@@ -197,7 +194,7 @@ Ctrl-b d
 tmux attach
 
 # Detach an already attached session (great if you are moving devices with different screen resolutions)
-tmux attach -d 
+tmux attach -d
 
 # Display session:
 tmux ls

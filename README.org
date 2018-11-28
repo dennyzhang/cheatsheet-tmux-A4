@@ -81,7 +81,9 @@ https://wiki.freebsdchina.org/software/t/tmux
 
 https://robots.thoughtbot.com/a-tmux-crash-course
 
- License: Code is licensed under [[https://www.dennyzhang.com/wp-content/mit_license.txt][MIT License]].
+https://gist.github.com/Bekbolatov/6840069e51382965fdad
+
+License: Code is licensed under [[https://www.dennyzhang.com/wp-content/mit_license.txt][MIT License]].
 
 #+BEGIN_HTML
  <a href="https://www.dennyzhang.com"><img align="right" width="201" height="268" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/denny_201706.png"></a>
@@ -238,3 +240,25 @@ Ctrl-b %
 # Split windows vertically:
 Ctrl-b "
 * TODO [#A] tmate copy files in client side              :noexport:IMPORTANT:
+* TODO ngrok + tmux: setup ssh reverse proxy                       :noexport:
+https://ngrok.com/docs
+** setup ssh reverse proxy ngrok
+** ngrok tmux ssh
+ https://gist.github.com/karampok/64067862052b2565b348812f0cb13bfc
+ https://gist.github.com/keithpitty/38266d38d44d06fabf6b707df608f73e
+
+ ngrok authtoken 2sVqHXBmmsSmZfCaVcrqR_6BzxZJu94dv137xigzkyV
+
+ gh-auth add --users="pks" --command="$(which tmux) attach -t tc"
+
+ ssh pks@0.tcp.ngrok.io -p 12956 -vvvv
+
+#+BEGIN_EXAMPLE
+ zdenny-a02:~ zdenny$ ngrok authtoken 2sVqHXBmmsSmZfCaVcrqR_6BzxZJu94dv137xigzkyV
+ Authtoken saved to configuration file: /Users/zdenny/.ngrok2/ngrok.yml
+
+ ngrok tcp 22
+
+ ssh zdenny@0.tcp.ngrok.io -p 10550
+#+END_EXAMPLE
+* TODO tmux screen get locked                                      :noexport:

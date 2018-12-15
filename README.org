@@ -1,6 +1,6 @@
 * Tmux CheatSheet                                                     :Tools:
 :PROPERTIES:
-:type:     tmux
+:type:     tool
 :export_file_name: cheatsheet-tmux-A4.pdf
 :END:
 
@@ -9,7 +9,7 @@
 <div id="the whole thing" style="overflow: hidden;">
 <div style="float: left; padding: 5px"> <a href="https://www.linkedin.com/in/dennyzhang001"><img src="https://www.dennyzhang.com/wp-content/uploads/sns/linkedin.png" alt="linkedin" /></a></div>
 <div style="float: left; padding: 5px"><a href="https://github.com/dennyzhang"><img src="https://www.dennyzhang.com/wp-content/uploads/sns/github.png" alt="github" /></a></div>
-<div style="float: left; padding: 5px"><a href="https://www.dennyzhang.com/slack" target="_blank" rel="nofollow"><img src="https://slack.dennyzhang.com/badge.svg" alt="slack"/></a></div>
+<div style="float: left; padding: 5px"><a href="https://www.dennyzhang.com/slack" target="_blank" rel="nofollow"><img src="https://www.dennyzhang.com/wp-content/uploads/sns/slack.png" alt="slack"/></a></div>
 </div>
 
 <br/><br/>
@@ -20,7 +20,7 @@
 - Blog URL: https://cheatsheet.dennyzhang.com/cheatsheet-tmux-A4
 - Related posts: [[https://cheatsheet.dennyzhang.com/cheatsheet-ssh-A4][Cheatsheet: ssh]], [[https://github.com/topics/denny-cheatsheets][#denny-cheatsheets]]
 
-File me [[https://github.com/dennyzhang/cheatsheet-emacs-A4/issues][Issues]] or star [[https://github.com/DennyZhang/cheatsheet-emacs-A4][this repo]].
+File me [[https://github.com/dennyzhang/cheatsheet.dennyzhang.com/issues][Issues]] or star [[https://github.com/dennyzhang/cheatsheet.dennyzhang.com][this repo]].
 ** Tmux Basic
 | Name                   | Comment                                |
 |------------------------+----------------------------------------|
@@ -37,7 +37,7 @@ File me [[https://github.com/dennyzhang/cheatsheet-emacs-A4/issues][Issues]] or 
 |---------------------------+--------------------------|
 | Switch to next pane       | =C-b o=                  |
 | Vertically split pane     | =C-b %=                  |
-| Horizontally split pane   | C-b "                    |
+| Horizontally split pane   | =C-b "=                  |
 | Kill current pane         | =C-b x=                  |
 | Swap two panes            | =C-b C-o=                |
 | Resize current pane right | =C-b :resize-pane -R 20= |
@@ -47,33 +47,20 @@ File me [[https://github.com/dennyzhang/cheatsheet-emacs-A4/issues][Issues]] or 
 |-------------------------------+--------------------------------------------------|
 | Enter copy mode               | =C-b [=, press q/Esc to exit                     |
 | Search output                 | =C-b C-s=, =C-b C-u=                             |
-| Paste buffer to current panel | =C-b]=                                           |
+| Paste buffer to current panel | =C-b ]=                                          |
 | Page up/down                  | Enter copy mode, then use normal navigation keys |
+| [[http://osxdaily.com/2015/07/07/page-up-page-down-mac-keyboard/][Page up/down in Mac]]           | =Fn + Up Arrow=                                  |
 | Show things in current buffer | =tmux show-buffer=                               |
 | List all buffer               | =tmux list-buffers=                              |
 | Save buffer to file           | =tmux save-buffer foo.txt=                       |
 ** Tmate
-| Name                                           | Comment                                            |
-|------------------------------------------------+----------------------------------------------------|
-| see tmate log messages: ssh conn string        | =tmate show-messages=                              |
-| Launch tmate in a detached state               | =tmate -S /tmp/tmate.sock new-session -d=          |
-| Blocks until the SSH connection is established | =tmate -S /tmp/tmate.sock wait tmate-ready=        |
-| Prints tmate SSH connection string             | tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}' |
-| Make your tmate session big by default         | [[https://apple.stackexchange.com/a/98406][Make your default iterm window big]]                 |
-** Scripts
-- Copy to mac clipboard
-
-Note: Only works for the laptop who hosts the tmux/tmate session
-
-#+BEGIN_SRC sh
-brew install reattach-to-user-namespace
-
-# In tmux, search a region. Then save to pbcopy
-tmux save-buffer - | reattach-to-user-namespace pbcopy
-
-# In mac terminal
-pbpaste
-#+END_SRC
+| Name                                           | Comment                                              |
+|------------------------------------------------+------------------------------------------------------|
+| see tmate log messages: ssh conn string        | =tmate show-messages=                                |
+| Launch tmate in a detached state               | =tmate -S /tmp/tmate.sock new-session -d=            |
+| Blocks until the SSH connection is established | =tmate -S /tmp/tmate.sock wait tmate-ready=          |
+| Prints tmate SSH connection string             | =tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'= |
+| Make your tmate session big by default         | [[https://apple.stackexchange.com/a/98406][Make your default iterm window big]]                   |
 ** More Resources
 https://gist.github.com/MohamedAlaa/2961058
 
@@ -86,12 +73,12 @@ https://gist.github.com/Bekbolatov/6840069e51382965fdad
 License: Code is licensed under [[https://www.dennyzhang.com/wp-content/mit_license.txt][MIT License]].
 
 #+BEGIN_HTML
- <a href="https://www.dennyzhang.com"><img align="right" width="201" height="268" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/denny_201706.png"></a>
- <a href="https://www.dennyzhang.com"><img align="right" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
+ <a href="https://cheatsheet.dennyzhang.com"><img align="right" width="201" height="268" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/denny_201706.png"></a>
+ <a href="https://cheatsheet.dennyzhang.com"><img align="right" src="https://raw.githubusercontent.com/dennyzhang/cheatsheet.dennyzhang.com/master/images/cheatsheet_dns.png"></a>
 
  <a href="https://www.linkedin.com/in/dennyzhang001"><img align="bottom" src="https://www.dennyzhang.com/wp-content/uploads/sns/linkedin.png" alt="linkedin" /></a>
  <a href="https://github.com/dennyzhang"><img align="bottom"src="https://www.dennyzhang.com/wp-content/uploads/sns/github.png" alt="github" /></a>
- <a href="https://www.dennyzhang.com/slack" target="_blank" rel="nofollow"><img align="bottom" src="https://slack.dennyzhang.com/badge.svg" alt="slack"/></a>
+ <a href="https://www.dennyzhang.com/slack" target="_blank" rel="nofollow"><img align="bottom" src="https://www.dennyzhang.com/wp-content/uploads/sns/slack.png" alt="slack"/></a>
 #+END_HTML
 * org-mode configuration                                           :noexport:
 #+STARTUP: overview customtime noalign logdone showall
@@ -107,7 +94,7 @@ License: Code is licensed under [[https://www.dennyzhang.com/wp-content/mit_lice
 #+LATEX_HEADER: \rhead{Updated: \today}
 #+LATEX_HEADER: \rfoot{\thepage\ of \pageref{LastPage}}
 #+LATEX_HEADER: \lfoot{\href{https://github.com/dennyzhang/cheatsheet-tmux-A4}{GitHub: https://github.com/dennyzhang/cheatsheet-tmux-A4}}
-#+LATEX_HEADER: \lhead{\href{https://cheatsheet.dennyzhang.com/cheatsheet-slack-A4}{Blog URL: https://cheatsheet.dennyzhang.com/cheatsheet-tmux-A4}}
+#+LATEX_HEADER: \lhead{\href{https://cheatsheet.dennyzhang.com/cheatsheet-tmux-A4}{Blog URL: https://cheatsheet.dennyzhang.com/cheatsheet-tmux-A4}}
 #+AUTHOR: Denny Zhang
 #+EMAIL:  denny@dennyzhang.com
 #+TAGS: noexport(n)
@@ -183,7 +170,6 @@ http://stackoverflow.com/questions/12289227/how-do-i-copy-entire-contents-of-fil
 ** TODO Save sessions of previous tmux ssh
 ** #  --8<-------------------------- separator ------------------------>8-- :noexport:
 ** TODO [#A] tmate: ssh directly
-* TODO [#A] tmate sometimes doesn't work                           :noexport:
 * more content                                                     :noexport:
 ** file1
 # Start tmux:
@@ -239,6 +225,7 @@ Ctrl-b %
 
 # Split windows vertically:
 Ctrl-b "
+* TODO [#A] tmate sometimes doesn't work                           :noexport:
 * TODO [#A] tmate copy files in client side              :noexport:IMPORTANT:
 * TODO ngrok + tmux: setup ssh reverse proxy                       :noexport:
 https://ngrok.com/docs
@@ -262,3 +249,20 @@ https://ngrok.com/docs
  ssh zdenny@0.tcp.ngrok.io -p 10550
 #+END_EXAMPLE
 * TODO tmux screen get locked                                      :noexport:
+* TODO tmux search: list all matched entries                       :noexport:
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
+* TODO mac tmux page up and page down with Fn key                  :noexport:
+* Scripts                                                          :noexport:
+- Copy to mac clipboard
+
+Note: Only works for the laptop who hosts the tmux/tmate session
+
+#+BEGIN_SRC sh
+brew install reattach-to-user-namespace
+
+# In tmux, search a region. Then save to pbcopy
+tmux save-buffer - | reattach-to-user-namespace pbcopy
+
+# In mac terminal
+pbpaste
+#+END_SRC
